@@ -11,8 +11,8 @@ import org.influxdb.dto.BatchPoints;
 import org.influxdb.dto.Point;
 import org.influxdb.dto.Query;
 import org.influxdb.dto.QueryResult;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -20,8 +20,9 @@ import org.springframework.context.annotation.Configuration;
  *
  */
 @Configuration
-public class InfluxDBTemplate implements InitializingBean {
+public class InfluxDBTemplate {
 
+	@Value("${influxdb.appServer}")
 	private String appServer;
 	
 	@Autowired
@@ -41,14 +42,6 @@ public class InfluxDBTemplate implements InitializingBean {
 	
 	public QueryResult query(Query query, TimeUnit timeUnit){
 		return influxDBConnectionFactory.getInfluxdb().query(query, timeUnit);	
-	}
-	
-	/* (non-Javadoc)
-	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
-	 */
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		this.appServer = influxDBConnectionFactory.getInfluxDBSettings().getAppServer();
 	}
 
 	public String getAppServer() {
