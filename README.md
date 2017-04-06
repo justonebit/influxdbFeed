@@ -6,4 +6,4 @@ License
 
 Copyright (c) 2017 Avinash Singh
 
-Published under Apache Software License 2.0, see LICENSE
+Published under Apache Software License 2.0
