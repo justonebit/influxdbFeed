@@ -75,8 +75,7 @@ public class InfluxDBReporter extends ScheduledReporter {
 			pntLst.add(jvmMemPntBldr.build());
 			pntLst.add(jvmMemPoolsPntBldr.build());
 			pntLst.add(jvmThreadPntBldr.build());
-			pntLst.stream().forEach((pnt) -> System.out.println(pnt));
-			// influxDBTemplate.write(pntLst, null, ConsistencyLevel.ALL);
+			influxDBTemplate.write(pntLst, null, ConsistencyLevel.ALL);
 		}
 	}
 }
