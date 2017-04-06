@@ -27,8 +27,7 @@ public class InfluxDBLogger implements Runnable {
 	 */
 	@Override
 	public void run() {
-		pntList.stream().forEach((pnt)-> System.out.println(pnt));
-		//influxDBTemplate.write(pntList, null, ConsistencyLevel.ALL);
+		influxDBTemplate.write(pntList, null, ConsistencyLevel.ALL);
 	}
 
 }
