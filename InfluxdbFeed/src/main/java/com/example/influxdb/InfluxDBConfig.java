@@ -25,7 +25,7 @@ public class InfluxDBConfig {
 	public static final String JVM_GC = "jvm_gc";
 	public static final String JVM_MEMORY = "jvm_memory";
 	public static final String JVM_MEMORY_POOLS = "jvm_memory_pools";
-	public static final String JVM_THREAD_STATE = "jvm_thread-states";
+	public static final String JVM_THREAD_STATE = "jvm_thread_states";
 	
 	@Autowired
 	private InfluxDBTemplate influxDBTemplate;
