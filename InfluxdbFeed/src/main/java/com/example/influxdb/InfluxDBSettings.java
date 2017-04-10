@@ -21,7 +21,7 @@ public class InfluxDBSettings {
 	private String password;
 	private String database;	
 	private String appServer;
-	private String retentionPolicy = "default";
+	private String retentionPolicy;
 	
 	/**
 	 * @return the url
