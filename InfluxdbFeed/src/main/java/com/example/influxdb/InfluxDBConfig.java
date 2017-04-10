@@ -22,10 +22,10 @@ import com.codahale.metrics.jvm.ThreadStatesGaugeSet;
 @Configuration
 public class InfluxDBConfig {
 
-	public static final String JVM_GC = "jvm.gc";
-	public static final String JVM_MEMORY = "jvm.memory";
-	public static final String JVM_MEMORY_POOLS = "jvm.memory.pools";
-	public static final String JVM_THREAD_STATE = "jvm.thread-states";
+	public static final String JVM_GC = "jvm_gc";
+	public static final String JVM_MEMORY = "jvm_memory";
+	public static final String JVM_MEMORY_POOLS = "jvm_memory_pools";
+	public static final String JVM_THREAD_STATE = "jvm_thread-states";
 	
 	@Autowired
 	private InfluxDBTemplate influxDBTemplate;
